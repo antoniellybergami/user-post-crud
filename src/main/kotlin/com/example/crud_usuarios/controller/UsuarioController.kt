@@ -2,6 +2,7 @@ package com.example.crud_usuarios.controller
 
 import com.example.crud_usuarios.model.Usuario
 import com.example.crud_usuarios.service.UsuarioService
+import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*
 class UsuarioController (private val usuarioService: UsuarioService) {
 
     @PostMapping
-    fun create(@RequestBody usuario: Usuario): Usuario {
+    fun create(@Valid @RequestBody usuario: Usuario): Usuario {
         return usuarioService.create(usuario)
     }
 
@@ -25,7 +26,7 @@ class UsuarioController (private val usuarioService: UsuarioService) {
    }
 
     @PutMapping("/{id}")
-    fun update(@PathVariable id: Long, @RequestBody usuario: Usuario): Usuario {
+    fun update(@PathVariable id: Long, @Valid @RequestBody usuario: Usuario): Usuario {
         return usuarioService.update(id, usuario)
     }
 

@@ -4,8 +4,10 @@ import com.example.crud_usuarios.model.Usuario
 import com.example.crud_usuarios.repository.UsuarioRepository
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
+import org.springframework.validation.annotation.Validated
 
 @Service
+@Validated
 class UsuarioService(private val usuarioRepository: UsuarioRepository) {
 
     fun create(usuario: Usuario): Usuario {
