@@ -10,6 +10,7 @@ import org.springframework.validation.annotation.Validated
 @Validated
 class UsuarioService(private val usuarioRepository: UsuarioRepository) {
 
+
     fun create(usuario: Usuario): Usuario {
         return usuarioRepository.save(usuario)
     }
