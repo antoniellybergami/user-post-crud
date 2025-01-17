@@ -3,7 +3,6 @@ package com.example.crud_usuarios.model
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotEmpty
 
-
 @Entity
 data class Post (
     @Id
@@ -18,7 +17,7 @@ data class Post (
     @Column(columnDefinition = "text")
     var description : String,
 
-    @ManyToOne(fetch = FetchType.EAGER) //quando um post é carregado, o usuario associado a ele é carregado junto
+    @ManyToOne(fetch = FetchType.EAGER) //quando um post é carregado, o usuario associado a ele é carregado junt
     @JoinColumn(name = "userId")
     var user : Usuario,
 )

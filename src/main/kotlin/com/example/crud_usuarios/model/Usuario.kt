@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Size
 
 @Entity
 data class Usuario (
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
