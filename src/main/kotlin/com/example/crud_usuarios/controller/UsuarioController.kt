@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/users")
 class UsuarioController (private val usuarioService: UsuarioService) {
 
+
     @PostMapping
     fun create(@Valid @RequestBody usuario: Usuario): Usuario {
         return usuarioService.create(usuario)
