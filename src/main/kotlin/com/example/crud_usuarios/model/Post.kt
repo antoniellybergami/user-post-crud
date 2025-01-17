@@ -3,7 +3,6 @@ package com.example.crud_usuarios.model
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotEmpty
 
-
 @Entity
 data class Post (
     @Id

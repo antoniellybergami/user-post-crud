@@ -5,7 +5,6 @@ import com.example.crud_usuarios.repository.PostRepository
 import com.example.crud_usuarios.repository.UsuarioRepository
 import org.springframework.stereotype.Service
 
-
 @Service
 class PostService(
     private val postRepository: PostRepository,
