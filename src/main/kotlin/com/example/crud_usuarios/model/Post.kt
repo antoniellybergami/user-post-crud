@@ -18,7 +18,7 @@ data class Post (
     @Column(columnDefinition = "text")
     var description : String,
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER) //quando um post é carregado, o usuario associado a ele é carregado junto
     @JoinColumn(name = "userId")
     var user : Usuario,
 )

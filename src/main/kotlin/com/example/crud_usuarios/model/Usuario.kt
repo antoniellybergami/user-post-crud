@@ -19,7 +19,7 @@ data class Usuario (
     @field:Email(message = "Email cannot be empty")
     var email: String? = null,
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER) //Quand um user é carregado, os posts associados a ele são carregados junto
     val posts: List<Post> = mutableListOf()
 
 )
